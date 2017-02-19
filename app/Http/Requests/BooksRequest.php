@@ -27,7 +27,6 @@ class BooksRequest extends FormRequest
         return [
             'isbn' => [
                 'required',
-                'numeric',
                 Rule::unique('books')->ignore($this->route()->book),
             ],
             'title' => 'required',
